@@ -3,9 +3,15 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "eslint-plugin-prettier": "^3.0.0",
+    "prop-types": "^15.6.2",
     "react": "^16.6.3",
     "react-dom": "^16.6.3",
-    "react-scripts": "2.1.1"
+    "react-redux": "^5.1.1",
+    "react-scripts": "2.1.1",
+    "redux": "^4.0.1",
+    "redux-logger": "^3.0.6",
+    "redux-thunk": "^2.3.0"
   },
   "scripts": {
     "start": "react-scripts start",
@@ -13,13 +19,13 @@
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "precommit": "lint-staged",
-    "eslint":	"node_modules/.bin/eslint src/"
+    "eslint": "node_modules/.bin/eslint src/"
   },
   "eslintConfig": {
     "extends": "react-app"
   },
-  "lint-staged":{
-    "*.{js, jsx}":	[
+  "lint-staged": {
+    "*.{js, jsx}": [
       "node_modules/.bin/eslint --max-warnings=0",
       "prettier --write",
       "git add"
