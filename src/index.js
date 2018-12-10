@@ -1,15 +1,13 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import { createStore } from 'redux'
 import { Provider } from 'react-redux'
+import { store } from "./store/configureStore";
 import './index.css';
-import App from './App';
+import App from './container/App';
 import * as serviceWorker from './serviceWorker';
 
-const store = createStore(() => {}, {})
-
 ReactDOM.render(
-  <Provider>
+  <Provider store={store}>
     <App />
   </Provider>,
   document.getElementById('root')
